@@ -1,0 +1,26 @@
+[
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxySimulator.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxySimulator.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxySimulator.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	}
+]
