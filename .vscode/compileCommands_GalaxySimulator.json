@@ -1,5 +1,165 @@
 [
 	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Private\\MCPCommandHandlers.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Private\\MCPConstants.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Private\\MCPTCPServer.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Private\\Unreal5MCP.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Public\\MCPCommandHandlers.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Public\\MCPConstants.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Public\\MCPSettings.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Public\\MCPTCPServer.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Public\\Unreal5MCP.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Plugins\\unreal5-mcp\\Source\\Unreal5MCP\\Unreal5MCP.Build.cs",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\Unreal5MCP.47.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\CelestialBody.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\CelestialBody.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyCameraPawn.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyCameraPawn.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyGameMode.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyGameMode.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyManager.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyManager.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyPlayerController.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxyPlayerController.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
 		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxySimulator.Build.cs",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
@@ -17,6 +177,38 @@
 	},
 	{
 		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\GalaxySimulator.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\OrbitComponent.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\OrbitComponent.h",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\Star.cpp",
+		"arguments": [
+			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
+			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"
+		],
+		"directory": "E:\\UE\\UE_5.7\\Engine\\Source"
+	},
+	{
+		"file": "E:\\UE\\Unreal Projects\\GalaxySimulator\\Source\\GalaxySimulator\\Star.h",
 		"arguments": [
 			"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.44.35207\\bin\\Hostx64\\x64\\cl.exe",
 			"@E:\\UE\\Unreal Projects\\GalaxySimulator\\.vscode\\compileCommands_GalaxySimulator\\GalaxySimulator.1.rsp"

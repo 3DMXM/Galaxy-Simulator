@@ -41,6 +41,18 @@ public:
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
     float CameraZoomSpeed;
 
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+    float FastMoveMultiplier; // Shift加速倍率
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+    float OrbitRotationSpeed; // 围绕目标旋转速度
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+    float OrbitDistance; // 围绕目标的距离
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Camera")
+    bool bOrbitMode; // 是否处于轨道相机模式
+
     // UI相关
     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "UI")
     TSubclassOf<class UUserWidget> MainUIWidgetClass;
@@ -75,7 +87,19 @@ private:
 
     void OnMouseClick();
     void OnRightMouseClick();
+    void OnRightMouseReleased();
+    void OnMiddleMousePressed();
+    void OnMiddleMouseReleased();
+    void OnShiftPressed();
+    void OnShiftReleased();
 
     FVector2D GetMousePositionOnScreen() const;
     ACelestialBody *TraceForCelestialBody();
+
+    // 相机状态
+    bool bIsRightMouseDown;
+    bool bIsMiddleMouseDown;
+    bool bIsShiftDown;
+    FVector2D LastMousePosition;
+    FVector OrbitPivotPoint; // 轨道旋转中心点
 };

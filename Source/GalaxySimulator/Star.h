@@ -30,10 +30,28 @@ public:
     UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
     class UPointLightComponent *LightComponent;
 
+    // 自转属性
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Star Properties|Rotation")
+    float RotationSpeed; // 自转速度 (度/秒)
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Star Properties|Rotation")
+    FVector RotationAxis; // 自转轴 (归一化向量)
+
+    UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Star Properties|Rotation")
+    bool bEnableRotation; // 是否启用自转
+
 protected:
     virtual void BeginPlay() override;
 
 public:
+    virtual void Tick(float DeltaTime) override;
+
     UFUNCTION(BlueprintCallable, Category = "Star")
     void UpdateStarLight();
+
+    UFUNCTION(BlueprintCallable, Category = "Star")
+    void SetRotationSpeed(float NewSpeed);
+
+    UFUNCTION(BlueprintCallable, Category = "Star")
+    void SetRotationAxis(FVector NewAxis);
 };

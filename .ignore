@@ -1,4 +1,10 @@
+/.git
 /.vscode
 /Content
+/DerivedDataCache
+/docs
 /Intermediate
 /Saved
+/Plugins/unreal5-mcp/Intermediate
+/Plugins/unreal5-mcp/Logs
+/Plugins/unreal5-mcp/PythonTemp

@@ -19,10 +19,21 @@ AGalaxyPlayerController::AGalaxyPlayerController()
     CameraMoveSpeed = 1000.0f;
     CameraRotationSpeed = 50.0f;
     CameraZoomSpeed = 500.0f;
+    FastMoveMultiplier = 3.0f;
+    OrbitRotationSpeed = 100.0f;
+    OrbitDistance = 5000.0f;
+    bOrbitMode = false;
 
     GalaxyManager = nullptr;
     SelectedBody = nullptr;
     MainUIWidget = nullptr;
+
+    // 初始化鼠标状态
+    bIsRightMouseDown = false;
+    bIsMiddleMouseDown = false;
+    bIsShiftDown = false;
+    LastMousePosition = FVector2D::ZeroVector;
+    OrbitPivotPoint = FVector::ZeroVector;
 }
 
 void AGalaxyPlayerController::BeginPlay()
@@ -81,12 +92,52 @@ void AGalaxyPlayerController::SetupInputComponent()
         // 鼠标点击
         InputComponent->BindAction("MouseClick", IE_Pressed, this, &AGalaxyPlayerController::OnMouseClick);
         InputComponent->BindAction("RightMouseClick", IE_Pressed, this, &AGalaxyPlayerController::OnRightMouseClick);
+        InputComponent->BindAction("RightMouseClick", IE_Released, this, &AGalaxyPlayerController::OnRightMouseReleased);
+        InputComponent->BindAction("MiddleMouseClick", IE_Pressed, this, &AGalaxyPlayerController::OnMiddleMousePressed);
+        InputComponent->BindAction("MiddleMouseClick", IE_Released, this, &AGalaxyPlayerController::OnMiddleMouseReleased);
+        InputComponent->BindAction("SpeedBoost", IE_Pressed, this, &AGalaxyPlayerController::OnShiftPressed);
+        InputComponent->BindAction("SpeedBoost", IE_Released, this, &AGalaxyPlayerController::OnShiftReleased);
     }
 }
 
 void AGalaxyPlayerController::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
+
+    // 处理中键拖动围绕选中物体旋转
+    if (bIsMiddleMouseDown && SelectedBody)
+    {
+        float MouseX, MouseY;
+        GetInputMouseDelta(MouseX, MouseY);
+
+        if (FMath::Abs(MouseX) > 0.01f || FMath::Abs(MouseY) > 0.01f)
+        {
+            APawn *ControlledPawn = GetPawn();
+            if (ControlledPawn)
+            {
+                // 获取选中物体的位置作为旋转中心
+                FVector TargetLocation = SelectedBody->GetActorLocation();
+                FVector CameraLocation = ControlledPawn->GetActorLocation();
+
+                // 计算相机到目标的距离
+                float Distance = FVector::Dist(CameraLocation, TargetLocation);
+                OrbitDistance = Distance;
+
+                // 计算旋转
+                FRotator CurrentRotation = GetControlRotation();
+                CurrentRotation.Yaw += MouseX * OrbitRotationSpeed * DeltaTime;
+                CurrentRotation.Pitch += MouseY * OrbitRotationSpeed * DeltaTime;
+                CurrentRotation.Pitch = FMath::Clamp(CurrentRotation.Pitch, -89.0f, 89.0f);
+
+                // 应用旋转
+                SetControlRotation(CurrentRotation);
+
+                // 计算新的相机位置（围绕目标旋转）
+                FVector NewLocation = TargetLocation - CurrentRotation.Vector() * Distance;
+                ControlledPawn->SetActorLocation(NewLocation);
+            }
+        }
+    }
 }
 
 void AGalaxyPlayerController::MoveForward(float Value)
@@ -100,7 +151,8 @@ void AGalaxyPlayerController::MoveForward(float Value)
         APawn *ControlledPawn = GetPawn();
         if (ControlledPawn)
         {
-            ControlledPawn->AddActorWorldOffset(Direction * Value * CameraMoveSpeed * GetWorld()->GetDeltaSeconds());
+            float Speed = CameraMoveSpeed * (bIsShiftDown ? FastMoveMultiplier : 1.0f);
+            ControlledPawn->AddActorWorldOffset(Direction * Value * Speed * GetWorld()->GetDeltaSeconds());
         }
     }
 }
@@ -114,7 +166,8 @@ void AGalaxyPlayerController::MoveRight(float Value)
         APawn *ControlledPawn = GetPawn();
         if (ControlledPawn)
         {
-            ControlledPawn->AddActorWorldOffset(Direction * Value * CameraMoveSpeed * GetWorld()->GetDeltaSeconds());
+            float Speed = CameraMoveSpeed * (bIsShiftDown ? FastMoveMultiplier : 1.0f);
+            ControlledPawn->AddActorWorldOffset(Direction * Value * Speed * GetWorld()->GetDeltaSeconds());
         }
     }
 }
@@ -126,7 +179,8 @@ void AGalaxyPlayerController::MoveUp(float Value)
         APawn *ControlledPawn = GetPawn();
         if (ControlledPawn)
         {
-            ControlledPawn->AddActorWorldOffset(FVector::UpVector * Value * CameraMoveSpeed * GetWorld()->GetDeltaSeconds());
+            float Speed = CameraMoveSpeed * (bIsShiftDown ? FastMoveMultiplier : 1.0f);
+            ControlledPawn->AddActorWorldOffset(FVector::UpVector * Value * Speed * GetWorld()->GetDeltaSeconds());
         }
     }
 }
@@ -146,7 +200,7 @@ void AGalaxyPlayerController::ZoomCamera(float Value)
 
 void AGalaxyPlayerController::RotateCameraYaw(float Value)
 {
-    if (Value != 0.0f)
+    if (Value != 0.0f && bIsRightMouseDown)
     {
         AddYawInput(Value * CameraRotationSpeed * GetWorld()->GetDeltaSeconds());
     }
@@ -154,7 +208,7 @@ void AGalaxyPlayerController::RotateCameraYaw(float Value)
 
 void AGalaxyPlayerController::RotateCameraPitch(float Value)
 {
-    if (Value != 0.0f)
+    if (Value != 0.0f && bIsRightMouseDown)
     {
         AddPitchInput(Value * CameraRotationSpeed * GetWorld()->GetDeltaSeconds());
     }
@@ -171,8 +225,40 @@ void AGalaxyPlayerController::OnMouseClick()
 
 void AGalaxyPlayerController::OnRightMouseClick()
 {
-    // 右键可以用于取消选择或其他操作
-    SelectCelestialBody(nullptr);
+    bIsRightMouseDown = true;
+}
+
+void AGalaxyPlayerController::OnRightMouseReleased()
+{
+    bIsRightMouseDown = false;
+}
+
+void AGalaxyPlayerController::OnMiddleMousePressed()
+{
+    bIsMiddleMouseDown = true;
+
+    // 如果有选中物体，进入轨道模式
+    if (SelectedBody)
+    {
+        bOrbitMode = true;
+        OrbitPivotPoint = SelectedBody->GetActorLocation();
+    }
+}
+
+void AGalaxyPlayerController::OnMiddleMouseReleased()
+{
+    bIsMiddleMouseDown = false;
+    bOrbitMode = false;
+}
+
+void AGalaxyPlayerController::OnShiftPressed()
+{
+    bIsShiftDown = true;
+}
+
+void AGalaxyPlayerController::OnShiftReleased()
+{
+    bIsShiftDown = false;
 }
 
 ACelestialBody *AGalaxyPlayerController::TraceForCelestialBody()
