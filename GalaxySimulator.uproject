@@ -17,6 +17,10 @@
 			"TargetAllowList": [
 				"Editor"
 			]
+		},
+		{
+			"Name": "Unreal5MCP",
+			"Enabled": true
 		}
 	]
 }
